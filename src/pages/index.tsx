@@ -40,11 +40,11 @@ const IndexPage = () => {
                 user_id: "46112541151408111111",
                 first_name: "teste",
                 last_name: "teste",
-                email: email,
+                email: "teste@teste",
                 products: [
                   {
                     product_id: `${Math.random() * (10000000 - 1) + 1}`,
-                    title: "a",
+                    title: email,
                     image_src: "a",
                     product_url: "a",
                   },
