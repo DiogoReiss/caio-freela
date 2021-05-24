@@ -1,6 +1,5 @@
 import Layout from "../components/Layout";
 import { useState } from "react";
-import addUser from "../utils/addUserInMailchimp";
 
 const IndexPage = () => {
   const [email, setEmail] = useState("");
@@ -34,7 +33,11 @@ const IndexPage = () => {
         />
         <div
           className="flex w-10/12 md:w-4/12 h-20 rounded-md text-branco bg-azulEscuro text-center self-center justify-center mt-6 hover:bg-azulClaro transition duration-150 ease-in-out cursor-pointer"
-          onClick={() => addUser(email)}
+          onClick={() => {
+            window.alert(
+              "Obrigado! Um e-mail foi enviado para o e-mail cadastrado"
+            );
+          }}
         >
           <a
             href=""
