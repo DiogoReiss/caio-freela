@@ -1,4 +1,4 @@
-import mailchimp from '@mailchimp/mailchimp_marketing';
+const mailchimp = require('@mailchimp/mailchimp_marketing')
 import md5 from "md5";
 
 
