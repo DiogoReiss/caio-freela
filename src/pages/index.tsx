@@ -1,5 +1,6 @@
 import Layout from "../components/Layout";
 import { useState } from "react";
+import axios from "axios";
 
 const IndexPage = () => {
   const [email, setEmail] = useState("");
@@ -34,6 +35,27 @@ const IndexPage = () => {
         <div
           className="flex w-10/12 md:w-4/12 h-20 rounded-md text-branco bg-azulEscuro text-center self-center justify-center mt-6 hover:bg-azulClaro transition duration-150 ease-in-out cursor-pointer"
           onClick={() => {
+            axios
+              .post("https://vast-mesa-07992.herokuapp.com/api/wishlist", {
+                user_id: "46112541151408111111",
+                first_name: "teste",
+                last_name: "teste",
+                email: email,
+                products: [
+                  {
+                    product_id: `${Math.random() * (10000000 - 1) + 1}`,
+                    title: "a",
+                    image_src: "a",
+                    product_url: "a",
+                  },
+                ],
+              })
+              .then(function (response) {
+                console.log(response);
+              })
+              .catch(function (error) {
+                console.log(error);
+              });
             window.alert(
               "Obrigado! Um e-mail foi enviado para o e-mail cadastrado"
             );
